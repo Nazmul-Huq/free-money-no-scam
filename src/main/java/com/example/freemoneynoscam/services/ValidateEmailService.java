@@ -3,7 +3,6 @@ package com.example.freemoneynoscam.services;
 import com.example.freemoneynoscam.repository.DatabaseInsertion;
 import org.springframework.stereotype.Service;
 
-import java.util.regex.Pattern;
 
 @Service
 public class ValidateEmailService {
@@ -12,11 +11,9 @@ public class ValidateEmailService {
 
 
     public boolean isEmailValid(String email){
-        if (Pattern.matches(".+@.+.", email)) {
-            //return false;
+        if ( (email.matches(".*(\\.).*")) && (email.matches(".*(\\@).*"))){
             return true;
         } else {
-            //return true;
             return false;
         }
     }
