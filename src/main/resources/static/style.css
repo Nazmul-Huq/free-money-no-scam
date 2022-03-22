@@ -13,6 +13,14 @@ h1{
     color: darkslategray;
 }
 
+.not-success{
+    color: red;
+}
+
+.success{
+    color: blue;
+}
+
 .content{
     display:flex;
     flex-direction: column;

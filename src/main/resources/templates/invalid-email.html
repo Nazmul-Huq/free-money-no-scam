@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Free money </title>
+    <link rel="stylesheet" th:href="@{style.css}" href="../static/style.css">
+</head>
+<body>
+
+<!-- redirect user to the homepage -->
+<section class="content">
+    <h1>🤑 Free moneyy no scam - very easy</h1>
+    <h1 class="not-success">Your given email is not valid</h1>
+    A valid email must contain at least one '@' and one '.' sign
+    <br>
+    <br>
+    <a th:href="@{/index}">Click to try again</a>
+    <a th:href="@{/index}">Click to go to home</a>
+</section>
+</body>
+</html>
