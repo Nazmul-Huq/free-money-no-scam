@@ -4,17 +4,13 @@
     <div th:insert="header :: myheader"></div>
 </head>
 <body>
-
+<!-- TODO User should be able to submit data -->
 <section class="content">
     <h1>🤑 Free moneyy no scam - very easy</h1>
-
-    <h1 class="not-success">Adding to database failed</h1>
-    <br>
-    <br>
-    <a th:href="@{/add-email}">Click to try again</a>
-    <br>
+    <div th:each="email: ${emails}">
+        <span th:text="${email}"></span>
+    </div>
     <div th:insert="fragments :: link-to-other-page"></div>
 </section>
-
 </body>
 </html>

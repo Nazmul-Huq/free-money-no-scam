@@ -6,19 +6,14 @@
     <link rel="stylesheet" th:href="@{style.css}" href="../static/style.css">
 </head>
 <body>
-
-<!-- redirect user to the homepage -->
+<!-- TODO User should be able to submit data -->
 <section class="content">
-
     <h1>🤑 Free moneyy no scam - very easy</h1>
-
-    <h1 class="not-success">Your given email is not valid</h1>
-
-    A valid email must contain at least one '@' and one '.' sign
-    <br>
-    <br>
-    <a th:href="@{/add-email}">Click to try again</a>
-
+    <form method="POST" action="/test">
+        <label for="email">🥳 Please enter your e-mail</label>
+        <input id="email" type="text" name ="email"/>
+        <input type="submit">
+    </form>
     <div th:insert="fragments :: link-to-other-page"></div>
 </section>
 </body>

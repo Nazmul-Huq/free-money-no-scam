@@ -25,7 +25,7 @@ class ValidateEmailServiceTest {
         assertEquals(true,result1);
         assertEquals(false,result2);
         assertEquals(false,result3);
-       assertEquals(true,result4);
+        assertEquals(true,result4);
     }
 
 }

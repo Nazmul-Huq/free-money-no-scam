@@ -1,8 +1,10 @@
 package com.example.freemoneynoscam.controllers;
 
+import com.example.freemoneynoscam.services.ManageData;
 import com.example.freemoneynoscam.services.ValidateEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
@@ -12,6 +14,8 @@ public class IndexController {
 
     @Autowired
     ValidateEmailService validateEmailService;
+    @Autowired
+    ManageData manageData;
 
     // map to homepage
     @GetMapping("/")
@@ -24,6 +28,26 @@ public class IndexController {
     public String homePage(){
         return "index";
     }
+
+
+    // map to add email page
+    @GetMapping("/add-email")
+    public String addEmail(){
+        return "add-email";
+    }
+
+    @GetMapping("/get-a-random-email")
+    public String getARandomEmail(Model model){
+        model.addAttribute("emails", manageData.getSingleEmailFromDatabase());        ;
+        return "show-email";
+    }
+
+    @GetMapping("/get-all-email")
+    public String getAllEmail(Model model){
+        model.addAttribute("emails", manageData.getAllEmailFromDatabase());        ;
+        return "show-email";
+    }
+
 
     @PostMapping("/test")
     public String addEmail(WebRequest formData){

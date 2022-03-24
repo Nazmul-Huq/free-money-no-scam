@@ -1,6 +1,7 @@
 package com.example.freemoneynoscam.services;
 
-import com.example.freemoneynoscam.repository.DatabaseInsertion;
+import com.example.freemoneynoscam.model.Email;
+import com.example.freemoneynoscam.repositories.DatabaseInsertion;
 import org.springframework.stereotype.Service;
 
 
@@ -20,7 +21,7 @@ public class ValidateEmailService {
 
     public String addEmailToDatabase(String email){
         if (isEmailValid(email)) {
-            if (databaseInsertion.addData(email)) {
+            if (databaseInsertion.addData(new Email(email))) {
                 return "succeed";
             } else {
                 return "not-succeed";

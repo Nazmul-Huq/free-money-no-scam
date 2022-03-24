@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Free money </title>
-    <link rel="stylesheet" th:href="@{style.css}" href="../static/style.css">
+    <div th:replace="header :: myheader"></div>
 </head>
 <body>
     <!-- TODO User should be able to submit data -->
     <section class="content">
             <h1>🤑 Free moneyy no scam - very easy</h1>
-            <form method="POST" action="/test">
-                <label for="email">🥳 Please enter your e-mail</label>
-                <input id="email" type="text" name ="email"/>
-                <input type="submit">
-            </form>
+            <div th:insert="fragments :: link-to-other-page"></div>
     </section>
 </body>
 </html>

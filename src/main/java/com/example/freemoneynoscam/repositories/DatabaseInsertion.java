@@ -1,4 +1,6 @@
-package com.example.freemoneynoscam.repository;
+package com.example.freemoneynoscam.repositories;
+
+import com.example.freemoneynoscam.model.Email;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,7 +22,7 @@ public class DatabaseInsertion {
         }
     }
 
-    public boolean addData(String email){
+    public boolean addData(Email email){
 
         try
         {

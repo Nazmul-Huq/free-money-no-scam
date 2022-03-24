@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Free money </title>
-    <link rel="stylesheet" th:href="@{style.css}" href="../static/style.css">
+  <div th:insert="header :: myheader"></div>
 </head>
 <body>
 
@@ -14,9 +12,7 @@
         <h1 class="success">Email added successfully</h1>
         <br>
         <br>
-        <a th:href="@{/index}">Click to add one more email</a>
-        <br>
-        <a th:href="@{/index}">Click to go to home</a>
+        <div th:insert="fragments :: link-to-other-page"></div>
     </section>
 
 
