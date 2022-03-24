@@ -8,6 +8,11 @@ import java.sql.Statement;
 
 public class DatabaseInsertion {
 
+    /**
+     * connect wtih database
+     * @param databaseName
+     * @return
+     */
     static Connection getConnection(String databaseName){
         try {
             //Define URL of database server for database named databaseName on the localhost with the default port number 3306.
@@ -22,6 +27,11 @@ public class DatabaseInsertion {
         }
     }
 
+    /**
+     * insert data into the database (ie, add email)
+     * @param email
+     * @return
+     */
     public boolean addData(Email email){
 
         try

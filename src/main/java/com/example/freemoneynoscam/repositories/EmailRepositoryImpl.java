@@ -10,6 +10,10 @@ import java.util.ArrayList;
 
 public class EmailRepositoryImpl implements EmailRepository{
 
+    /**
+     * make connection with the database
+     * @return
+     */
     static Connection getConnection(){
         try {
             //Define URL of database server for database named databaseName on the localhost with the default port number 3306.
@@ -24,6 +28,10 @@ public class EmailRepositoryImpl implements EmailRepository{
         }
     }
 
+    /**
+     * get a random email from database
+     * @return
+     */
     @Override
     public ArrayList<String> fetchSingleEmail() {
 
@@ -50,6 +58,10 @@ public class EmailRepositoryImpl implements EmailRepository{
 
     }
 
+    /**
+     * get all email from database
+     * @return
+     */
     @Override
     public ArrayList<String> fetchAllEmails() {
         ArrayList<String> emails = new ArrayList<>();
