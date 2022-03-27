@@ -19,7 +19,7 @@ public class DatabaseInsertion {
             String url = "jdbc:mysql://localhost:3306/" + databaseName;
 
             //Get a connection to the database for a user named root with password admin
-            Connection con = DriverManager.getConnection(url,"root","dAtAmAtiker2021");
+            Connection con = DriverManager.getConnection(url,"root","#####");
             return con;
 
         }catch (Exception e){
